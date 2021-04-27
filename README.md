@@ -31,7 +31,7 @@
 
 - This is an unofficial fork of CrewLink-server, for any problem, issue or suggestion you have with BetterCrewLink-server talk to us on our [Discord](https://discord.gg/qDqTzvj4SH), or [GitHub](https://github.com/OhMyGuus/BetterCrewLink-server/issues) or message me on Discord ([ThaGuus#2140](https://discordapp.com/users/508426414387757057)) do not report any problems to the official Discord or GitHub of CrewLink as they will not support you.
 
-- I recommend you use my BetterCrewLink server: <a href="https://bettercrewl.ink">`https://bettercrewl.ink`</a>, it is quite stable and most people are using it and I highly recommend it if you don't know a lot about how to host servers, but if you do and how to host anyway, feel free with the open source.
+- I recommend you use my BetterCrewLink Server: <a href="https://bettercrewl.ink">`https://bettercrewl.ink`</a>, it is quite stable and most people are using it and I highly recommend it if you don't know a lot about how to host servers, but if you do and how to host, feel free with the open source.
 
 [![BetterCrewLink Voice Server Status][status-shield]][status-url] [![BetterCrewLink Voice Server Uptime][uptime-shield]][uptime-url] 
 
