@@ -1,5 +1,3 @@
-[![GPL-3.0 License][license-shield]][license-url] [![Docker Pulls][docker-shield]][docker-url] [![Run on Repl.it][replit-shield]][replit-url] [![Discord Server][discord-shield]][discord-url] [![Contributors][contributors-shield]][contributors-url]
-
 <br />
 <p align="center">
   <a href="https://github.com/OhMyGuus/BetterCrewLink-server">
@@ -19,11 +17,19 @@
 <hr />
 
 <p>
+<p align="center">
+    <a href="https://hub.docker.com/repository/docker/ohmyguus/bettercrewlink-server"><img src="https://img.shields.io/docker/pulls/ohmyguus/bettercrewlink-server?label=Docker%20Pulls&logo=Docker" alt="Docker Pulls"></img></a>
+    <a href="https://repl.it/github/OhMyGuus/BetterCrewLink-server"><img src="https://repl.it/badge/github/OhMyGuus/BetterCrewLink-server" alt="Run on Repl.it"></img></a>
+    <a href="https://github.com/OhMyGuus/BetterCrewLink-server/blob/master/LICENSE"><img src="https://img.shields.io/github/license/OhMyGuus/BetterCrewLink-server?label=License" alt="GPL-3.0 License"></img></a>
+    <a href="https://discord.gg/qDqTzvj4SH"><img src="https://img.shields.io/discord/791516611143270410?color=cornflowerblue&label=Discord&logo=Discord&logoColor=white" alt="Discord Server"></img></a>
+    <a href="https://github.com/OhMyGuus/BetterCrewLink-server/graphs/contributors"><img src="https://img.shields.io/github/contributors/OhMyGuus/BetterCrewLink-server?label=Contributors&logo=GitHub" alt="Contributors"></img></a>
+</p>
+<hr />
 
 <!-- NOTES -->
-<b>Notes:</b><br />
+## Notes
 
-- This is an unofficial fork of CrewLink, for any problem, issue or suggestion you have with BetterCrewLink talk to us on our [Discord](https://discord.gg/qDqTzvj4SH), or [GitHub](https://github.com/OhMyGuus/BetterCrewLink-server/issues) or message me on Discord ([ThaGuus#2140](https://discordapp.com/users/508426414387757057)) do not report any problems to the official Discord or GitHub project of CrewLink as they will not support you.
+- This is an unofficial fork of CrewLink-server, for any problem, issue or suggestion you have with BetterCrewLink-server talk to us on our [Discord](https://discord.gg/qDqTzvj4SH), or [GitHub](https://github.com/OhMyGuus/BetterCrewLink-server/issues) or message me on Discord ([ThaGuus#2140](https://discordapp.com/users/508426414387757057)) do not report any problems to the official Discord or GitHub of CrewLink as they will not support you.
 
 - I recommend you use my BetterCrewLink server: <a href="https://bettercrewl.ink">`https://bettercrewl.ink`</a>, it is quite stable and most people are using it and I highly recommend it if you don't know a lot about how to host servers, but if you do and how to host anyway, feel free with the open source.
 
@@ -40,7 +46,6 @@
   * [Installation](#installation)
   * [Customizing Peer to Peer Behavior](#customizing-peer-to-peer-behavior)
 * [Contributing](#contributing)
-  * [Contributors](#contributors)
 * [License](#license)
 
 <!-- ABOUT THE PROJECT -->
@@ -130,6 +135,7 @@ yarn install
 yarn start
 ```
 4. Copy your server URL into CrewLink settings. Make sure everyone in your lobby is using the same server.
+
 ### Customizing Peer to Peer Behavior
 By default CrewLink clients will attempt to establish connections directly to each other for sending voice and game 
 state data. As a fallback mechanism, CrewLink-server ships with an integrated TURN server in the event clients cannot
@@ -140,7 +146,11 @@ to protect player IP addresses. To do so, head into the ``config`` folder and re
 <!-- CONTRIBUTING -->
 ## Contributing
 
+[![Contributors][contributors-shield]][contributors-url]
+
 Any contributions you make are greatly appreciated.
+
+Needed [Git](https://git-scm.com/downloads) for Contributing.
 
 1. [Fork the Project](https://github.com/OhMyGuus/BetterCrewLink-server/fork)
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -148,38 +158,32 @@ Any contributions you make are greatly appreciated.
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### Contributors
+<hr />
 
-[![Contributors][contributors-shield]][contributors-url]
+<details>
+<summary> Contributors </summary>
 
-* [OhMyGuus](https://github.com/OhMyGuus) for make various things for [BetterCrewLink](https://github.com/OhMyGuus/BetterCrewLink), example: NAT Fix, more overlays, support for Mobile and owner of project
-* [ottomated](https://github.com/ottomated) for make [CrewLink](https://github.com/ottomated/CrewLink)
-* [vrnagy](https://github.com/vrnagy) for make WebRTC reconnects automatically for [BetterCrewLink](https://github.com/OhMyGuus/BetterCrewLink)
-* [TheGreatMcPain](https://github.com/TheGreatMcPain) & [Donokami](https://github.com/Donokami) for make support for Linux
-* [squarebracket](https://github.com/squarebracket) for make support overlay for Linux
-* [JKohlman](https://github.com/JKohlman) for make various things for [BetterCrewLink](https://github.com/OhMyGuus/BetterCrewLink), example: push to mute, visual changes and making Multi Stage builds for [BetterCrewLink Server](https://github.com/OhMyGuus/BetterCrewLink-server)
-* [Diemo-zz](https://github.com/Diemo-zz) for make the default Voice Server for: <a href="https://bettercrewl.ink">`https://bettercrewl.ink`</a>
-* [KadenBiel](https://github.com/KadenBiel) for make various things for [BetterCrewLink Mobile](https://github.com/OhMyGuus/BetterCrewlink-mobile), example: Better UI, Settings page
-* [adofou](https://github.com/adofou) for make new parameters for node-turn server for [BetterCrewLink-Server](https://github.com/OhMyGuus/BetterCrewLink-server)
-* [Kore-Development](https://github.com/Kore-Development) for make support for Repl.it and gitignore changes for [BetterCrewLink-Server](https://github.com/OhMyGuus/BetterCrewLink-server)
-* [cybershard](https://github.com/cybershard) & [edqx](https://github.com/edqx) for make Only hear people in vision, Walls block voice and Hear through cameras
-* [electron-overlay-window](https://github.com/SnosMe/electron-overlay-window) for make it easier to do overlays
-* [node-keyboard-watcher](https://github.com/OhMyGuus/node-keyboard-watcher) for make it easy to push to talk and push to mute
-* [MatadorProBr](https://github.com/MatadorProBr) for make this list of Contribuators, better README.md, wiki
+See the category [Contributors (in other repository)](https://github.com/OhMyGuus/BetterCrewLink#contributing).
 
-A big thank you to all those people who contributed and still contribute to this project to stay alive, thank you for being part of this BetterCrewLink community!
+</details>
+
+<hr />
 
 ## License
 
 Distributed under the GNU General Public License v3.0. See <a href="https://github.com/OhMyGuus/BetterCrewLink-server/blob/master/LICENSE">`LICENSE`</a> for more information.
 
-[license-shield]: https://img.shields.io/github/license/OhMyGuus/BetterCrewLink-server?label=License
-[license-url]: https://github.com/OhMyGuus/BetterCrewLink-server/blob/master/LICENSE
-[docker-shield]: https://img.shields.io/docker/pulls/ohmyguus/bettercrewlink-server?label=Docker%20Pulls
+[docker-shield]: https://img.shields.io/docker/pulls/ohmyguus/bettercrewlink-server?label=Docker%20Pulls&logo=Docker
 [docker-url]: https://hub.docker.com/repository/docker/ohmyguus/bettercrewlink-server
 [replit-shield]: https://repl.it/badge/github/OhMyGuus/BetterCrewLink-server
 [replit-url]: https://repl.it/github/OhMyGuus/BetterCrewLink-server
+[license-shield]: https://img.shields.io/github/license/OhMyGuus/BetterCrewLink-server?label=License
+[license-url]: https://github.com/OhMyGuus/BetterCrewLink-server/blob/master/LICENSE
 [discord-shield]: https://img.shields.io/discord/791516611143270410?color=cornflowerblue&label=Discord&logo=Discord&logoColor=white
 [discord-url]: https://discord.gg/qDqTzvj4SH
-[contributors-shield]: https://img.shields.io/github/contributors/OhMyGuus/BetterCrewLink-server?label=Contributors
+[contributors-shield]: https://img.shields.io/github/contributors/OhMyGuus/BetterCrewLink-server?label=Contributors&logo=GitHub
 [contributors-url]: https://github.com/OhMyGuus/BetterCrewLink-server/graphs/contributors
+[status-shield]: https://img.shields.io/nodeping/status/d05ourk4-xif3-4x57-83ro-59qr0yr5j33l?down_message=Offline&label=Status&up_message=Online
+[status-url]: https://bettercrewl.ink/
+[uptime-shield]: https://img.shields.io/nodeping/uptime/d05ourk4-xif3-4x57-83ro-59qr0yr5j33l?label=Uptime
+[uptime-url]: https://bettercrewl.ink/
