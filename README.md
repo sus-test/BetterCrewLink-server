@@ -55,6 +55,7 @@
 
 This is the relay server for CrewLink, an Among Us proximity voice chat program. I am currently hosting a server at <a href="https://bettercrewl.ink">`https://bettercrewl.ink`</a>, but if you want to make your own server, feel free to open source the server.
 
+<!-- ENVIRONMENT VARIABLES -->
 ## Environment Variables
 
 Optional environment variables:
@@ -65,6 +66,7 @@ Optional environment variables:
  - `HTTPS`: Enables https. You must place `privkey.pem` and `fullchain.pem` in your CWD.
  - `SSLPATH`: Specifies an alternate path to SSL certificates.
 
+<!-- DEPLOY TO HEROKU -->
 ## Deploy to Heroku
 
 To get up and running quickly, you can deploy to Heroku clicking on the button below:
@@ -73,6 +75,7 @@ To get up and running quickly, you can deploy to Heroku clicking on the button b
 
 This will deploy an instance of the BetterCrewLink-server. You can get the URL of your server by using the app name that you gave when you launched the app on Heroku and appending `.herokuapp.com`. You can also find the URL of your server by going to "Settings", scrolling down to "Domains". Using this URL, follow step 4 of the [installation instructions](https://github.com/OhMyGuus/BetterCrewLink-server#manual-installation) to connect your client to your server instance.
 
+<!-- DEPLOY TO REPL.IT -->
 ## Deploy to Repl.it
 
 Another way to host your server besides using Heroku it's the Repl.it that provide you to host servers completely free without having time per month, and you can deploy it by clicking on this button below:
@@ -81,6 +84,7 @@ Another way to host your server besides using Heroku it's the Repl.it that provi
 
 This will deploy an instance of the BetterCrewLink-server. You can get the URL of your server by using the app name that you gave when you launched the app on Repl.it and appending `[your-username.repl.co]`. You can also find the URL of your server by going to "Web View". Using this URL, follow step 4 of the [installation instructions](https://github.com/OhMyGuus/BetterCrewLink-server#manual-installation) to connect your client to your server instance.
 
+<!-- DOCKER QUICKSTART -->
 ## Docker Quickstart
 
 Run the server with [Docker](https://docs.docker.com/get-docker/) by running the following command:
@@ -110,6 +114,7 @@ cd BetterCrewLink-server
 docker build -t ohmyguus/bettercrewlink-server:build
 ```
 
+<!-- MANUAL INSTALLATION -->
 ## Manual Installation
 
 ### Prerequisites
