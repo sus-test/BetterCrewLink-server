@@ -190,7 +190,7 @@ Distributed under the GNU General Public License v3.0. See <a href="https://gith
 [discord-url]: https://discord.gg/qDqTzvj4SH
 [contributors-shield]: https://img.shields.io/github/contributors/OhMyGuus/BetterCrewLink-server?label=Contributors&logo=GitHub
 [contributors-url]: https://github.com/OhMyGuus/BetterCrewLink-server/graphs/contributors
-[status-shield]: https://img.shields.io/nodeping/status/d05ourk4-xif3-4x57-83ro-59qr0yr5j33l?down_message=Offline&label=Status&up_message=Online
+[status-shield]: https://img.shields.io/website?down_message=Offline&label=Status&up_message=Online&url=https%3A%2F%2Fbettercrewl.ink%2F
 [status-url]: https://bettercrewl.ink/
-[uptime-shield]: https://img.shields.io/nodeping/uptime/d05ourk4-xif3-4x57-83ro-59qr0yr5j33l?label=Uptime
+[uptime-shield]: https://img.shields.io/uptimerobot/ratio/m787827421-93842e7a0fa80efd6eb22092?label=Uptime
 [uptime-url]: https://bettercrewl.ink/
