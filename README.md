@@ -170,7 +170,7 @@ Needed [Git](https://git-scm.com/downloads) for Contributing.
 <details>
 <summary> Contributors </summary>
 
-See the category [Contributors (in other repository)](https://github.com/OhMyGuus/BetterCrewLink#contributing).
+See the category [Contributors here](https://github.com/OhMyGuus/BetterCrewLink#contributing) (in other repository).
 
 </details>
 
