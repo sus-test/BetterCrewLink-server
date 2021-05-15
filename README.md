@@ -1,30 +1,196 @@
-doctype html
-head
-	title BetterCrewLink Server
-	link(rel="icon", href="https://github.com/OhMyGuus/BetterCrewLink/raw/nightly/src/renderer/logos/BCL-AppIcon.png", type="image/x-icon")
-	meta(property='og:title' content='BetterCrewLink Server')
-	meta(property='og:description' content='Voice server for Among Us proximity voice chat mod called BetterCrewLink')
-	meta(property='og:image' content='https://github.com/OhMyGuus/BetterCrewLink/raw/nightly/src/renderer/logos/BCL-AppIcon.png')
-	link(rel='stylesheet', href='/public/styles.css')
+<br />
+<p align="center">
+  <a href="https://github.com/OhMyGuus/BetterCrewLink-server">
+    <img src="logo.png" alt="Logo" width="80" height="80">
+  </a>
 
+  <h3 align="center">BetterCrewLink Server</h3>
 
-img(src="https://github.com/OhMyGuus/BetterCrewLink/raw/nightly/src/renderer/logos/sizes/256-BCL-Logo-shadow.png")
-h1 BetterCrewLink Server
-#crewinfo
+  <p align="center">
+    Voice Relay server for <a href="https://github.com/OhMyGuus/BetterCrewLink">BetterCrewLink</a>.
+    <br />
+    <a href="https://github.com/OhMyGuus/BetterCrewLink-server/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/OhMyGuus/BetterCrewLink-server/issues">Request Feature</a>
+  </p>
+</p>
+<hr />
 
-	p This is a BetterCrewLink Server running on:
-	br
-	b #{address}
-	p There #{connectionCount === 1 ? 'is' : 'are'} currently #{connectionCount} connected user#{connectionCount === 1 ? '' : 's'} 
-	<hr>
-	p
-		a(href="https://github.com/OhMyGuus/BetterCrewLink/releases/latest", target="_blank")
-			| To download BetterCrewLink
-			| <b>Click here</b>
-	<hr>
-	 
-		
-#background-container
-	#stars
-	#stars2
-	#stars3
+<p>
+<p align="center">
+    <a href="https://hub.docker.com/repository/docker/ohmyguus/bettercrewlink-server"><img src="https://img.shields.io/docker/pulls/ohmyguus/bettercrewlink-server?label=Docker%20Pulls&logo=Docker" alt="Docker Pulls"></img></a>
+    <a href="https://repl.it/github/OhMyGuus/BetterCrewLink-server"><img src="https://repl.it/badge/github/OhMyGuus/BetterCrewLink-server" alt="Run on Repl.it"></img></a>
+    <a href="https://github.com/OhMyGuus/BetterCrewLink-server/blob/master/LICENSE"><img src="https://img.shields.io/github/license/OhMyGuus/BetterCrewLink-server?label=License" alt="GPL-3.0 License"></img></a>
+    <a href="https://discord.gg/qDqTzvj4SH"><img src="https://img.shields.io/discord/791516611143270410?color=cornflowerblue&label=Discord&logo=Discord&logoColor=white" alt="Discord Server"></img></a>
+    <a href="https://github.com/OhMyGuus/BetterCrewLink-server/graphs/contributors"><img src="https://img.shields.io/github/contributors/OhMyGuus/BetterCrewLink-server?label=Contributors&logo=GitHub" alt="Contributors"></img></a>
+</p>
+<hr />
+
+<!-- NOTES -->
+## Notes
+
+- This is an unofficial fork of CrewLink-server, for any problem, issue or suggestion you have with BetterCrewLink-server talk to us on our [Discord](https://discord.gg/qDqTzvj4SH), or [GitHub](https://github.com/OhMyGuus/BetterCrewLink-server/issues) or message me on Discord ([ThaGuus#2140](https://discordapp.com/users/508426414387757057)) do not report any problems to the official Discord or GitHub of CrewLink as they will not support you.
+
+- I recommend you use my BetterCrewLink Server: <a href="https://bettercrewl.ink">`https://bettercrewl.ink`</a>, it is quite stable and most people are using it and I highly recommend it if you don't know a lot about how to host servers, but if you do and how to host, feel free with the open source.
+
+[![BetterCrewLink Voice Server Status][status-shield]][status-url] [![BetterCrewLink Voice Server Uptime][uptime-shield]][uptime-url] 
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+* [About the Project](#about-the-project)
+* [Deploy to Heroku](#deploy-to-heroku)
+* [Deploy to Repl.it](#deploy-to-replit)
+* [Docker Quickstart](#docker-quickstart)
+  * [Building the Docker Image](#building-the-docker-image)
+* [Manual Installation](#manual-installation)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Customizing Peer to Peer Behavior](#customizing-peer-to-peer-behavior)
+* [Contributing](#contributing)
+* [License](#license)
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+This is the relay server for CrewLink, an Among Us proximity voice chat program. I am currently hosting a server at <a href="https://bettercrewl.ink">`https://bettercrewl.ink`</a>, but if you want to make your own server, feel free to open source the server.
+
+<!-- ENVIRONMENT VARIABLES -->
+## Environment Variables
+
+Optional environment variables:
+
+ - `PORT`: Specifies the port that the server runs on. Defaults to `443` if `HTTPS` is enabled, and `9736` if not.
+ - `HOSTNAME`: The hostname or IP of the server (a record without a proxy so if you have cloudflare make a extra dns record named for example direct.domain.com and disable the proxy for that record (this is for the turn server)
+ - `NAME`: Specifies the server name
+ - `HTTPS`: Enables https. You must place `privkey.pem` and `fullchain.pem` in your CWD.
+ - `SSLPATH`: Specifies an alternate path to SSL certificates.
+
+<!-- DEPLOY TO HEROKU -->
+## Deploy to Heroku
+
+To get up and running quickly, you can deploy to Heroku clicking on the button below:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+This will deploy an instance of the BetterCrewLink-server. You can get the URL of your server by using the app name that you gave when you launched the app on Heroku and appending `.herokuapp.com`. You can also find the URL of your server by going to "Settings", scrolling down to "Domains". Using this URL, follow step 4 of the [installation instructions](https://github.com/OhMyGuus/BetterCrewLink-server#manual-installation) to connect your client to your server instance.
+
+<!-- DEPLOY TO REPL.IT -->
+## Deploy to Repl.it
+
+Another way to host your server besides using Heroku it's the Repl.it that provide you to host servers completely free without having time per month, and you can deploy it by clicking on this button below:
+
+[![Run on Repl.it][replit-shield]][replit-url]
+
+This will deploy an instance of the BetterCrewLink-server. You can get the URL of your server by using the app name that you gave when you launched the app on Repl.it and appending `[your-username.repl.co]`. You can also find the URL of your server by going to "Web View". Using this URL, follow step 4 of the [installation instructions](https://github.com/OhMyGuus/BetterCrewLink-server#manual-installation) to connect your client to your server instance.
+
+<!-- DOCKER QUICKSTART -->
+## Docker Quickstart
+
+Run the server with [Docker](https://docs.docker.com/get-docker/) by running the following command:
+
+```
+docker run -d -p 9736:9736 ohmyguus/bettercrewlink-server:latest
+```
+
+To change the external port the server uses, change the *first* instance of the port. For example, to use port 8123:
+
+```
+docker run -d -p 8123:9736 ohmyguus/bettercrewlink-server:latest
+```
+
+### Building the Docker Image
+
+To build your own Docker image, do the following:
+
+1. Clone the repo
+```sh
+git clone https://github.com/OhMyGuus/BetterCrewLink-server.git
+cd BetterCrewLink-server
+```
+
+2. Run the Docker build command:
+```sh
+docker build -t ohmyguus/bettercrewlink-server:build
+```
+
+<!-- MANUAL INSTALLATION -->
+## Manual Installation
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* [node.js](https://nodejs.org/en/download/)
+* yarn
+```sh
+npm install yarn -g
+```
+
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/OhMyGuus/BetterCrewLink-server.git
+cd BetterCrewLink-server
+```
+2. Install NPM packages
+```sh
+yarn install
+```
+3. Compile and run the project
+```JS
+yarn start
+```
+4. Copy your server URL into CrewLink settings. Make sure everyone in your lobby is using the same server.
+
+### Customizing Peer to Peer Behavior
+By default CrewLink clients will attempt to establish connections directly to each other for sending voice and game 
+state data. As a fallback mechanism, CrewLink-server ships with an integrated TURN server in the event clients cannot
+directly connect to each other. You may want to customize this behavior to, for example, exclusively use the TURN relay
+to protect player IP addresses. To do so, head into the ``config`` folder and rename ``peerConfig.example.yml`` to
+``peerConfig.yml`` and make the desired changes.
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+[![Contributors][contributors-shield]][contributors-url]
+
+Any contributions you make are greatly appreciated.
+
+Needed [Git](https://git-scm.com/downloads) for Contributing.
+
+1. [Fork the Project](https://github.com/OhMyGuus/BetterCrewLink-server/fork)
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<hr />
+
+<details>
+<summary> Contributors </summary>
+
+See the category [Contributors here](https://github.com/OhMyGuus/BetterCrewLink#contributing) (in other repository).
+
+</details>
+
+<hr />
+
+## License
+
+Distributed under the GNU General Public License v3.0. See <a href="https://github.com/OhMyGuus/BetterCrewLink-server/blob/master/LICENSE">`LICENSE`</a> for more information.
+
+[docker-shield]: https://img.shields.io/docker/pulls/ohmyguus/bettercrewlink-server?label=Docker%20Pulls&logo=Docker
+[docker-url]: https://hub.docker.com/repository/docker/ohmyguus/bettercrewlink-server
+[replit-shield]: https://repl.it/badge/github/OhMyGuus/BetterCrewLink-server
+[replit-url]: https://repl.it/github/OhMyGuus/BetterCrewLink-server
+[license-shield]: https://img.shields.io/github/license/OhMyGuus/BetterCrewLink-server?label=License
+[license-url]: https://github.com/OhMyGuus/BetterCrewLink-server/blob/master/LICENSE
+[discord-shield]: https://img.shields.io/discord/791516611143270410?color=cornflowerblue&label=Discord&logo=Discord&logoColor=white
+[discord-url]: https://discord.gg/qDqTzvj4SH
+[contributors-shield]: https://img.shields.io/github/contributors/OhMyGuus/BetterCrewLink-server?label=Contributors&logo=GitHub
+[contributors-url]: https://github.com/OhMyGuus/BetterCrewLink-server/graphs/contributors
+[status-shield]: https://img.shields.io/website?down_message=Offline&label=Status&up_message=Online&url=https%3A%2F%2Fbettercrewl.ink%2F
+[status-url]: https://bettercrewl.ink/
+[uptime-shield]: https://img.shields.io/uptimerobot/ratio/m787827421-93842e7a0fa80efd6eb22092?label=Uptime
+[uptime-url]: https://bettercrewl.ink/
